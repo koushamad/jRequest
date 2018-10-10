@@ -209,11 +209,11 @@ class jRequest {
             }
         }
         if jinfo!["error"] != nil {
-            let error =  jinfo!["error"]! as! String
+            let error =  jinfo!["error"]! as? String ?? ""
             self.response.err = error
         }
         if jinfo!["code"] != nil {
-            let code = Int(jinfo!["code"]! as! String)
+            let code = (jinfo!["code"]! as? String != nil) ? Int(jinfo!["code"]! as! String) : jinfo!["code"]! as? Int ?? 0
             self.response.code = code!
         }
         if jinfo!["data"] != nil &&  ((jinfo!["data"] as? [String:AnyObject]) != nil) {
