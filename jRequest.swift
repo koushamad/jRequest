@@ -19,9 +19,59 @@ class jRequest {
         self.request = request
         self.response = justResponce.init(request: request)
     }
+    
     init (method:justRequest.methods? = justRequest.methods.get,url:String,params:[String:AnyObject]? = nil,data:[String:AnyObject]? = nil,json:[String:Any]? = nil,headers:[String:String]? = nil,files : [String: HTTPFile]? = nil,auth: (String, String)? = nil,cookies: [String: String]? = nil,allowRedirects: Bool? = nil,timeout: Double? = nil,urlQuery: String? = nil,requestBody: Data? = nil,asyncProgressHandler: (TaskProgressHandler)? = nil,cash:Bool? = false , oneRes : Bool? = false , queue : Bool? = false , debug : Bool? = false ,asyncCompletionHandler: ((HTTPResult) -> Void)? = nil ) {
         
         let request = justRequest.init(method: method, url: url, params: params, data: data, json: json, headers: headers, files: files, auth: auth, cookies: cookies, allowRedirects: allowRedirects, timeout: timeout, urlQuery: urlQuery, requestBody: requestBody, asyncProgressHandler: asyncProgressHandler, cash: cash, oneRes: oneRes,queue: queue, debug: debug, asyncCompletionHandler: asyncCompletionHandler)
+        self.request = request
+        self.response = justResponce.init(request: request)
+    }
+    init (method:justRequest.methods? = justRequest.methods.get,url:String,cash:Bool? = false , oneRes : Bool? = false , queue : Bool? = false , debug : Bool? = false) {
+        
+        let request = justRequest.init(method: method, url: url, params: nil, data: nil, json: nil, headers: nil, files: nil, auth: nil, cookies: nil, allowRedirects: nil, timeout: nil, urlQuery: nil, requestBody: nil, asyncProgressHandler: nil, cash: cash, oneRes: oneRes,queue: queue, debug: debug, asyncCompletionHandler: nil)
+        self.request = request
+        self.response = justResponce.init(request: request)
+    }
+    
+    init (method:justRequest.methods? = justRequest.methods.get,url:String,params:[String:AnyObject]? = nil,data:[String:AnyObject]? = nil,json:[String:Any]? = nil,headers:[String:String]? = nil,cash:Bool? = false , oneRes : Bool? = false , queue : Bool? = false , debug : Bool? = false) {
+        
+        let request = justRequest.init(method: method, url: url, params: params, data: data, json: json, headers: headers, files: nil, auth: nil, cookies: nil, allowRedirects: nil, timeout: nil, urlQuery: nil, requestBody: nil, asyncProgressHandler: nil, cash: cash, oneRes: oneRes,queue: queue, debug: debug, asyncCompletionHandler: nil)
+        self.request = request
+        self.response = justResponce.init(request: request)
+    }
+    init (method:justRequest.methods? = justRequest.methods.get,url:String,data:[String:AnyObject]? = nil,json:[String:Any]? = nil,headers:[String:String]? = nil,cash:Bool? = false , oneRes : Bool? = false , queue : Bool? = false , debug : Bool? = false) {
+        
+        let request = justRequest.init(method: method, url: url, params: nil, data: data, json: json, headers: headers, files: nil, auth: nil, cookies: nil, allowRedirects: nil, timeout: nil, urlQuery: nil, requestBody: nil, asyncProgressHandler: nil, cash: cash, oneRes: oneRes,queue: queue, debug: debug, asyncCompletionHandler: nil)
+        self.request = request
+        self.response = justResponce.init(request: request)
+    }
+    init (method:justRequest.methods? = justRequest.methods.get,url:String,data:[String:AnyObject]? = nil,json:[String:Any]? = nil,cash:Bool? = false , oneRes : Bool? = false , queue : Bool? = false , debug : Bool? = false) {
+        
+        let request = justRequest.init(method: method, url: url, params: nil, data: data, json: json, headers: nil, files: nil, auth: nil, cookies: nil, allowRedirects: nil, timeout: nil, urlQuery: nil, requestBody: nil, asyncProgressHandler: nil, cash: cash, oneRes: oneRes,queue: queue, debug: debug, asyncCompletionHandler: nil)
+        self.request = request
+        self.response = justResponce.init(request: request)
+    }
+    init (method:justRequest.methods? = justRequest.methods.get,url:String,data:[String:AnyObject]? = nil,cash:Bool? = false , oneRes : Bool? = false , queue : Bool? = false , debug : Bool? = false) {
+        
+        let request = justRequest.init(method: method, url: url, params: nil, data: data, json: nil, headers: nil, files: nil, auth: nil, cookies: nil, allowRedirects: nil, timeout: nil, urlQuery: nil, requestBody: nil, asyncProgressHandler: nil, cash: cash, oneRes: oneRes,queue: queue, debug: debug, asyncCompletionHandler: nil)
+        self.request = request
+        self.response = justResponce.init(request: request)
+    }
+    init (method:justRequest.methods? = justRequest.methods.get,url:String,json:[String:Any]? = nil,cash:Bool? = false , oneRes : Bool? = false , queue : Bool? = false , debug : Bool? = false) {
+        
+        let request = justRequest.init(method: method, url: url, params: nil, data: nil, json: json, headers: nil, files: nil, auth: nil, cookies: nil, allowRedirects: nil, timeout: nil, urlQuery: nil, requestBody: nil, asyncProgressHandler: nil, cash: cash, oneRes: oneRes,queue: queue, debug: debug, asyncCompletionHandler: nil)
+        self.request = request
+        self.response = justResponce.init(request: request)
+    }
+    init (method:justRequest.methods? = justRequest.methods.get,url:String,params:[String:AnyObject]? = nil, headers:[String:String]? = nil,cash:Bool? = false , oneRes : Bool? = false , queue : Bool? = false , debug : Bool? = false) {
+        
+        let request = justRequest.init(method: method, url: url, params: params, data: nil, json: nil, headers: headers, files: nil, auth: nil, cookies: nil, allowRedirects: nil, timeout: nil, urlQuery: nil, requestBody: nil, asyncProgressHandler: nil, cash: cash, oneRes: oneRes,queue: queue, debug: debug, asyncCompletionHandler: nil)
+        self.request = request
+        self.response = justResponce.init(request: request)
+    }
+    init (method:justRequest.methods? = justRequest.methods.get,url:String,params:[String:AnyObject]? = nil,cash:Bool? = false , oneRes : Bool? = false , queue : Bool? = false , debug : Bool? = false) {
+        
+        let request = justRequest.init(method: method, url: url, params: params, data: nil, json: nil, headers: nil, files: nil, auth: nil, cookies: nil, allowRedirects: nil, timeout: nil, urlQuery: nil, requestBody: nil, asyncProgressHandler: nil, cash: cash, oneRes: oneRes,queue: queue, debug: debug, asyncCompletionHandler: nil)
         self.request = request
         self.response = justResponce.init(request: request)
     }
